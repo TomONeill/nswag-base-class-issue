@@ -26,14 +26,9 @@
     "MyBaseClass": {
       "type": "object",
       "required": [
-        "Age",
         "Name"
       ],
       "properties": {
-        "Age": {
-          "type": "integer",
-          "format": "int32"
-        },
         "Name": {
           "type": "string"
         }

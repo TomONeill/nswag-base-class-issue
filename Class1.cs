@@ -2,22 +2,16 @@ namespace ClassLibrary1
 {
     public class ExtClass : MyBaseClass
     {
-        public string Name = "Awesome";
+        public string Name = "Extended.Class";
 
-        public ExtClass(string name, string data) : base(12)
+        public ExtClass(string name)
         {
-            base.Name = data;
+            base.Name = name;
         }
     }
 
     public class MyBaseClass
     {
-        public int Age { get; set; }
         public string Name { get; set; }
-
-        public MyBaseClass(int age)
-        {
-            Age = age;
-        }
     }
 }

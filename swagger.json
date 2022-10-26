@@ -1,0 +1,43 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Swagger specification",
+    "version": "1.0.0"
+  },
+  "definitions": {
+    "ExtClass": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/MyBaseClass"
+        },
+        {
+          "type": "object",
+          "required": [
+            "Name"
+          ],
+          "properties": {
+            "Name": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "MyBaseClass": {
+      "type": "object",
+      "required": [
+        "Age",
+        "Name"
+      ],
+      "properties": {
+        "Age": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

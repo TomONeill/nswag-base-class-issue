@@ -11,7 +11,6 @@
 
 
 export class MyBaseClass implements IMyBaseClass {
-    age!: number;
     name!: string;
 
     constructor(data?: IMyBaseClass) {
@@ -25,7 +24,6 @@ export class MyBaseClass implements IMyBaseClass {
 
     init(_data?: any) {
         if (_data) {
-            this.age = _data["Age"];
             this.name = _data["Name"];
         }
     }
@@ -39,14 +37,12 @@ export class MyBaseClass implements IMyBaseClass {
 
     toJSON(data?: any) {
         data = typeof data === 'object' ? data : {};
-        data["Age"] = this.age;
         data["Name"] = this.name;
         return data;
     }
 }
 
 export interface IMyBaseClass {
-    age: number;
     name: string;
 }
 
@@ -82,4 +78,3 @@ export class ExtClass extends MyBaseClass implements IExtClass {
 export interface IExtClass extends IMyBaseClass {
     name: string;
 }
-
